@@ -27,7 +27,7 @@ Supported syntax:
 - Unordered lists using dashes `- list item`
 - Sublists by identation
 - Links with or without title `[my link](https://google.com "Google homepage")`
-- Inline code `\`code\``
+- Inline code `code`
 - Code block:
 
 ~~~ts
