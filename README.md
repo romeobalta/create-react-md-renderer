@@ -4,7 +4,10 @@
   <br/>
    Use the default renderers or create custom ones by element type.
   <br/><br/>
+  <a href="https://romeobalta.github.io/create-react-md-renderer/">Live example</a>
+  <br/><br/>
 </p>
+
 
 ## Install
 
