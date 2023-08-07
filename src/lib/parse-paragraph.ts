@@ -1,3 +1,8 @@
+export type ParagraphElement = {
+  type: "paragraph";
+  value: ParagraphElementValue[];
+};
+
 export type ParagraphTextElementValue =
   | {
       type: "text";
@@ -19,11 +24,6 @@ export type ParagraphTextElementValue =
       type: "underline";
       value: ParagraphTextElementValue[];
     };
-
-export type ParagraphElement = {
-  type: "paragraph";
-  value: ParagraphElementValue[];
-};
 
 export type ParagraphElementValue =
   | ParagraphTextElementValue

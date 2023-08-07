@@ -23,11 +23,11 @@ export const renderParagraphElement = (
       );
     case "strikethrough":
       return (
-        <span key={key}>
+        <s key={key}>
           {element.value.map((element, index) =>
             renderParagraphElement(element, `${key}-${index}`),
           )}
-        </span>
+        </s>
       );
     case "link":
       return (
@@ -39,11 +39,11 @@ export const renderParagraphElement = (
       return <code key={key}>{element.value}</code>;
     case "underline":
       return (
-        <span key={key}>
+        <u key={key} style={{ textDecorationLine: 'underline' }}>
           {element.value.map((element, index) =>
             renderParagraphElement(element, `${key}-${index}`),
           )}
-        </span>
+        </u>
       );
     case "text":
     default:
