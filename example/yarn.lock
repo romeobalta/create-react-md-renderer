@@ -3423,6 +3423,14 @@ cosmiconfig@^7.0.0:
     path-type "^4.0.0"
     yaml "^1.10.0"
 
+create-react-md-renderer@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/create-react-md-renderer/-/create-react-md-renderer-0.1.1.tgz#b19b01521921bf73ae5aa9b5954aabf4a9d3d403"
+  integrity sha512-sKw0zglV9FkjxMcdNONDu9TwND8o4BdKvkbEruPnXIpcCcREjByYf0/Qyna/QgoGkK0WEP79mfxqsJdXSWzaVw==
+  dependencies:
+    react "^18.2.0"
+    react-dom "^18.2.0"
+
 cross-spawn@^7.0.2, cross-spawn@^7.0.3:
   version "7.0.3"
   resolved "https://registry.yarnpkg.com/cross-spawn/-/cross-spawn-7.0.3.tgz#f73a85b9d5d41d045551c177e2882d4ac85728a6"
