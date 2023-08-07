@@ -8,7 +8,6 @@
   <br/><br/>
 </p>
 
-
 ## Install
 
 ```bash
@@ -33,17 +32,19 @@ Supported syntax:
 - Inline code `code`
 - Code block:
 
-~~~ts
+````ts
 ```ts
 const sum = (a: number, b: number) => a + b
-```
-~~~
+```;
+````
 
 ## Usage
 
 Basic usage:
 
 ```tsx
+import { createMarkdownRenderer } from "create-react-md-renderer";
+
 function App() {
   const MarkdownRenderer = createMarkdownRenderer();
   const markdown = "# Heading!";
@@ -55,6 +56,8 @@ function App() {
 Custom renderers:
 
 ```tsx
+import { createMarkdownRenderer } from "create-react-md-renderer";
+
 function App() {
   const MarkdownRenderer = createMarkdownRenderer({
     headingRenderer: ({ heading }) => (
@@ -62,6 +65,13 @@ function App() {
         {heading.text}
       </h1>
     ),
+
+    // will use default if undefined
+    paragraphRenderer: undefined,
+    listRenderer: undefined,
+    headingRenderer: undefined,
+    codeRenderer: undefined,
+    blockquoteRenderer: undefined,
   });
 
   const markdown = "# Heading!";
@@ -181,6 +191,7 @@ export function DefaultParagraphRenderer({
 ```
 
 ### List renderer
+
 ```tsx
 export type ListElementValue = {
   type: "ordered" | "unordered";
@@ -218,6 +229,7 @@ export function DefaultListRenderer({ list }: ListRendererProps) {
 ```
 
 ### Heading renderer
+
 ```tsx
 export type HeadingElementValue = {
   level: number;
@@ -254,6 +266,7 @@ export function DefaultHeadingRenderer({ heading }: HeadingRendererProps) {
 ```
 
 ### Code renderer
+
 ```tsx
 export type CodeElementValue = {
   language: string;
@@ -274,6 +287,7 @@ export function DefaultCodeRenderer({ code }: CodeRendererProps) {
 ```
 
 ### Blockquote renderer
+
 ```tsx
 export type BlockquoteElementValue = string[];
 
