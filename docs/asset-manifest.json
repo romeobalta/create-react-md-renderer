@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.e6c13ad2.css",
-    "main.js": "/static/js/main.55f274ac.js",
-    "static/js/787.759e47f1.chunk.js": "/static/js/787.759e47f1.chunk.js",
-    "index.html": "/index.html",
-    "main.e6c13ad2.css.map": "/static/css/main.e6c13ad2.css.map",
-    "main.55f274ac.js.map": "/static/js/main.55f274ac.js.map",
-    "787.759e47f1.chunk.js.map": "/static/js/787.759e47f1.chunk.js.map"
+    "main.css": "/create-react-md-renderer/static/css/main.e6c13ad2.css",
+    "main.js": "/create-react-md-renderer/static/js/main.ffee4845.js",
+    "static/js/787.759e47f1.chunk.js": "/create-react-md-renderer/static/js/787.759e47f1.chunk.js",
+    "index.html": "/create-react-md-renderer/index.html",
+    "main.e6c13ad2.css.map": "/create-react-md-renderer/static/css/main.e6c13ad2.css.map",
+    "main.ffee4845.js.map": "/create-react-md-renderer/static/js/main.ffee4845.js.map",
+    "787.759e47f1.chunk.js.map": "/create-react-md-renderer/static/js/787.759e47f1.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.55f274ac.js"
+    "static/js/main.ffee4845.js"
   ]
 }

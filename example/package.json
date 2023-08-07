@@ -1,5 +1,6 @@
 {
   "name": "example",
+  "homepage": "https://romeobalta.github.io/create-react-md-renderer/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -19,7 +20,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build && mv ./build/* ../docs/",
+    "build": "react-scripts build && yarn move-docs",
+    "move-docs": "rm -rf ../docs/* && mv -f ./build/* ../docs/",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
