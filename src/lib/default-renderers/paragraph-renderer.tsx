@@ -1,0 +1,66 @@
+import { ParagraphElementValue } from "../../lib/parse-paragraph";
+
+export const renderParagraphElement = (
+  element: ParagraphElementValue,
+  key: number | string,
+) => {
+  switch (element.type) {
+    case "bold":
+      return (
+        <strong key={key}>
+          {element.value.map((element, index) =>
+            renderParagraphElement(element, `${key}-${index}`),
+          )}
+        </strong>
+      );
+    case "italic":
+      return (
+        <i key={key}>
+          {element.value.map((element, index) =>
+            renderParagraphElement(element, `${key}-${index}`),
+          )}
+        </i>
+      );
+    case "strikethrough":
+      return (
+        <span key={key}>
+          {element.value.map((element, index) =>
+            renderParagraphElement(element, `${key}-${index}`),
+          )}
+        </span>
+      );
+    case "link":
+      return (
+        <a key={key} href={element.value.url} title={element.value.tooltip}>
+          {element.value.title}
+        </a>
+      );
+    case "code":
+      return <code key={key}>{element.value}</code>;
+    case "underline":
+      return (
+        <span key={key}>
+          {element.value.map((element, index) =>
+            renderParagraphElement(element, `${key}-${index}`),
+          )}
+        </span>
+      );
+    case "text":
+    default:
+      return <span key={key}>{element.value}</span>;
+  }
+};
+
+export interface ParagraphRendererProps {
+  paragraph: ParagraphElementValue[];
+}
+
+export function DefaultParagraphRenderer({ paragraph }: ParagraphRendererProps) {
+  return (
+    <p>
+      {paragraph.map((element, index) =>
+        renderParagraphElement(element, index),
+      )}
+    </p>
+  );
+}
