@@ -1,6 +1,6 @@
 {
   "name": "create-react-md-renderer",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "license": "MIT",
   "author": "Romeo Balta",
   "description": "Render Markdown (MD) in React with ease. This package offers a simple and customizable way to display Markdown content in your React applications without any fuss.",
@@ -54,18 +54,6 @@
     "extends": [
       "react-app",
       "react-app/jest"
-    ] 
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
     ]
   }
 }
